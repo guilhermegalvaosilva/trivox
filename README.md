@@ -1,6 +1,6 @@
 🧩 Trivox — Impressão 3D
 
-https://guilhermegalvaosilva.github.io/Trivox/
+https://guilhermegalvaosilva.github.io/trivox/
 
 A Trivox é uma empresa focada em impressão 3D, criação de peças personalizadas, prototipagem rápida e soluções funcionais, transformando ideias digitais em objetos reais com precisão e qualidade.
 
@@ -90,7 +90,7 @@ Animações discretas para transmitir tecnologia e inovação
 
 Clona o repositório:
 
-git clone https://github.com/seu-usuario/trivox.git
+git clone https://github.com/guilhermegalvaosilva/trivox.git
 
 
 Abre o index.html no navegador
