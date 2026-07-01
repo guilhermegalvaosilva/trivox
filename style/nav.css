@@ -1,61 +1,23 @@
 .nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 70px;
-}
-
-.nav-title {
-  font-size: 2.3rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  cursor: pointer;
-
-  background: linear-gradient(270deg, #1aff8c, #00cfff, #ff2fd6, #1aff8c);
-  background-size: 600% 600%;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: gradientMove 6s ease infinite;
-  transition: letter-spacing 0.35s ease, transform 0.35s ease;
-}
-
-/* Hover — interação premium */
-.nav-title:hover {
-  letter-spacing: 0.25em;
-  transform: translateY(-2px);
-}
-
-/* Animação do gradiente */
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.hero {
-  min-height: 80vh;
-  display: flex;
+  max-width: 1180px;
+  min-height: calc(100vh - 82px);
+  margin: 0 auto;
+  padding: 78px 32px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
   align-items: center;
+  gap: 56px;
 }
 
 .hero-content {
-  max-width: 680px;
-  padding: 0 40px;
+  max-width: 700px;
 }
 
 .hero-title {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 24px;
+  margin: 0 0 24px;
+  font-size: clamp(2.6rem, 6vw, 5.4rem);
+  font-weight: 620;
+  line-height: 1.02;
 }
 
 .hero-title span {
@@ -65,96 +27,140 @@
 }
 
 .hero-text {
-  font-size: 1.1rem;
-  color: #d1d5db;
-  margin-bottom: 40px;
-  max-width: 520px;
+  max-width: 600px;
+  margin: 0 0 34px;
+  color: #cbd5e1;
+  font-size: 1.13rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-btn,
+.hero-link {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .hero-btn {
-  display: inline-block;
-  padding: 14px 32px;
-  border-radius: 12px;
-  font-weight: 600;
-  text-decoration: none;
+  padding: 0 28px;
   color: #020617;
-
-  background: linear-gradient(135deg, #1aff8c, #ff2fd6);
-
+  background: linear-gradient(135deg, #1aff8c, #00cfff);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .hero-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(26, 255, 140, 0.25);
+  box-shadow: 0 14px 34px rgba(26, 255, 140, 0.24);
 }
 
-/* =========================
-   3D PRINTER ANIMATION
-========================= */
+.hero-link {
+  padding: 0 18px;
+  color: #d1d5db;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.hero-visual {
+  min-height: 420px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.brand-mark {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.04);
+  font-size: clamp(4rem, 11vw, 8rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
 .printer {
   position: relative;
-  width: 220px;
-  height: 200px;
-  margin: 60px auto;
-  opacity: 0.4;
+  width: min(320px, 72vw);
+  height: 280px;
+  opacity: 0.92;
+  filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.35));
 }
 
-/* Estrutura */
 .printer-frame {
   position: absolute;
   inset: 0;
   border: 2px solid rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
+  border-radius: 8px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
 }
 
-/* Base */
 .printer-bed {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  width: 180px;
-  height: 10px;
+  bottom: 34px;
+  left: 32px;
+  width: calc(100% - 64px);
+  height: 13px;
   background: linear-gradient(90deg, #1aff8c, #00cfff);
-  border-radius: 6px;
+  border-radius: 999px;
 }
 
-/* Cabeça */
 .printer-head {
   position: absolute;
-  top: 30px;
-  left: 30px;
-  width: 40px;
-  height: 14px;
+  top: 56px;
+  left: 44px;
+  width: 54px;
+  height: 22px;
   background: #ff2fd6;
-  border-radius: 4px;
-
-  animation: headMove 3s linear infinite;
+  border-radius: 6px;
+  animation: headMove 3.2s linear infinite;
 }
 
-/* Camada a ser impressa */
+.printer-head::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 22px;
+  width: 8px;
+  height: 74px;
+  background: linear-gradient(#ff2fd6, rgba(255, 47, 214, 0));
+}
+
 .print-layer {
   position: absolute;
-  bottom: 32px;
-  left: 30px;
-  height: 4px;
+  bottom: 50px;
+  left: 48px;
+  height: 7px;
   width: 0;
   background: #1aff8c;
-  border-radius: 2px;
-
-  animation: layerGrow 3s linear infinite;
+  border-radius: 999px;
+  animation: layerGrow 3.2s linear infinite;
 }
 
-/* Animações */
 @keyframes headMove {
   0% {
-    left: 30px;
+    left: 44px;
   }
   50% {
-    left: 150px;
+    left: calc(100% - 98px);
   }
   100% {
-    left: 30px;
+    left: 44px;
   }
 }
 
@@ -164,10 +170,56 @@
     opacity: 1;
   }
   50% {
-    width: 120px;
+    width: calc(100% - 96px);
   }
   100% {
     width: 0;
     opacity: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding: 58px 24px 28px;
+    gap: 28px;
+  }
+
+  .hero-title,
+  .hero-text,
+  .hero-kicker {
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav {
+    padding: 46px 18px 16px;
+  }
+
+  .hero-title {
+    font-size: 2.55rem;
+  }
+
+  .hero-actions a {
+    width: 100%;
+  }
+
+  .hero-visual {
+    min-height: 230px;
+  }
+
+  .printer {
+    width: 240px;
+    height: 210px;
   }
 }

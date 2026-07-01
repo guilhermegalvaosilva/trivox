@@ -1,138 +1,49 @@
-🧩 Trivox — Impressão 3D
+# Trivox - Impressão 3D
 
-https://guilhermegalvaosilva.github.io/trivox/
+Vitrine comercial da Trivox, criada com HTML, CSS e JavaScript para apresentar
+produtos em impressão 3D, atrair compradores e receber pedidos pelo WhatsApp.
 
-A Trivox é uma empresa focada em impressão 3D, criação de peças personalizadas, prototipagem rápida e soluções funcionais, transformando ideias digitais em objetos reais com precisão e qualidade.
+## Funcionalidades
 
-Este repositório contém o website institucional da Trivox, desenvolvido com HTML, CSS e JavaScript, com foco em design moderno, performance e responsividade.
+- Layout responsivo para desktop, tablet e mobile.
+- Hero comercial com chamada para produtos e WhatsApp.
+- Menu mobile acessível.
+- Busca simples para filtrar conteúdos do site.
+- Seções de produtos, diferenciais, como comprar, ideias, FAQ e pedido.
+- Formulário que abre WhatsApp com pedido preenchido.
+- Animações suaves ao scroll.
+- Metadados básicos para SEO e compartilhamento.
 
-🚀 Funcionalidades do site
+## Estrutura
 
-✅ Layout moderno e responsivo (desktop, tablet e mobile)
-
-✅ Hero section com identidade visual forte
-
-✅ Animação de impressora 3D (CSS)
-
-✅ Cards com gradiente e glassmorphism
-
-✅ Secção de tecnologia e materiais
-
-✅ Parcerias
-
-✅ Formulário de contacto com animações
-
-✅ Footer completo com navegação e contacto
-
-✅ Scroll suave e micro-interações
-
-🛠️ Tecnologias utilizadas
-
-HTML5 — estrutura semântica
-
-CSS3 — layout, animações, gradientes e responsividade
-
-JavaScript — animações ao scroll e interações simples
-
-SVG — ícones leves e escaláveis
-
-📁 Estrutura do projeto
+```text
 /
 ├── index.html
-├── style/
-│   └── style.css
 ├── script.js
+├── style/
+│   ├── page.css
+│   ├── header.css
+│   ├── nav.css
+│   ├── main.css
+│   ├── footer.css
+│   └── style.css
 ├── img/
 │   └── logo.png
 └── README.md
+```
 
-📱 Responsividade
+## Ajuste importante
 
-O site foi desenvolvido com abordagem desktop-first, utilizando media queries para adaptar o layout a:
+Antes de publicar, substitua o número usado em `script.js` e no link principal
+do WhatsApp em `index.html` pelo número real da Trivox.
 
-Tablets (≤ 1024px)
+Formato esperado:
 
-Smartphones (≤ 768px)
+```js
+const whatsappNumber = "5500000000000";
+```
 
-Smartphones pequenos (≤ 480px)
+## Publicação
 
-A responsividade está centralizada no final do style.css, facilitando manutenção e evolução futura.
-
-✉️ Formulário de contacto
-
-O formulário inclui:
-
-Validação básica HTML
-
-Animações suaves ao foco e ao scroll
-
-Estrutura pronta para integração com serviços como:
-
-Formspree
-
-EmailJS
-
-Backend próprio (Node, PHP, etc.)
-
-🎨 Identidade visual
-
-A identidade da Trivox é baseada em:
-
-Tons escuros (fundo premium)
-
-Gradientes em verde, azul e rosa
-
-Tipografia forte e moderna
-
-Animações discretas para transmitir tecnologia e inovação
-
-📦 Como usar o projeto
-
-Clona o repositório:
-
-git clone https://github.com/guilhermegalvaosilva/trivox.git
-
-
-Abre o index.html no navegador
-ou
-
-Faz deploy em plataformas como:
-
-Netlify
-
-Vercel
-
-GitHub Pages
-
-🔮 Próximas melhorias (roadmap)
-
- Menu mobile (hambúrguer)
-
- Envio real do formulário
-
- Upload de ficheiros STL
-
- SEO básico
-
- Otimização de performance
-
- Conteúdo dinâmico (JS ou backend)
-
-📄 Licença
-
-Este projeto é de uso privado da Trivox.
-Todos os direitos reservados.
-
-🤝 Contacto
-
-📧 Email: contato@trivox.pt
-
-🌍 Atuação: Portugal · Brasil
-
-Se quiseres, no próximo passo posso:
-
-adaptar o README para português do Brasil
-
-criar uma versão mais comercial
-
-preparar o projeto para GitHub Pages / Netlify
+Por ser um site estático, basta abrir `index.html` no navegador ou publicar em
+GitHub Pages, Netlify ou Vercel.

@@ -1,56 +1,49 @@
-/* =========================
-   FOOTER
-========================= */
 .footer {
-  margin-top: 120px;
-  padding-top: 80px;
-
-  background: linear-gradient(180deg, rgba(2, 6, 23, 0), rgba(2, 6, 23, 0.95));
+  margin-top: 80px;
+  padding-top: 70px;
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0), rgba(2, 6, 23, 0.96));
 }
 
-/* Conteúdo */
 .footer-content {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 0 40px 60px;
-
+  padding: 0 32px 54px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 48px;
+  grid-template-columns: 1.3fr 0.8fr 1fr;
+  gap: 42px;
 }
 
-/* Marca */
 .footer-brand p {
-  margin-top: 16px;
-  color: #9ca3af;
-  line-height: 1.6;
-  max-width: 320px;
+  max-width: 340px;
+  margin: 16px 0 0;
+  color: #cbd5e1;
+  font-weight: 300;
+  line-height: 1.65;
 }
 
-/* Título TRIVOX */
 .footer-title {
-  font-size: 1.6rem;
-  font-weight: 800;
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 560;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
-
   background: linear-gradient(135deg, #1aff8c, #00cfff, #ff2fd6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Subtítulos */
 .footer h4 {
-  margin-bottom: 16px;
-  font-size: 0.9rem;
+  margin: 0 0 16px;
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  font-weight: 450;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #d1d5db;
 }
 
-/* Links */
 .footer-links ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-links li {
@@ -58,8 +51,9 @@
 }
 
 .footer-links a {
-  color: #9ca3af;
+  color: #cbd5e1;
   text-decoration: none;
+  font-weight: 300;
   transition: color 0.2s ease;
 }
 
@@ -67,21 +61,33 @@
   color: #1aff8c;
 }
 
-/* Contacto */
 .footer-contact p {
-  color: #9ca3af;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
+  color: #cbd5e1;
+  font-weight: 300;
 }
 
-/* Rodapé inferior */
 .footer-bottom {
   text-align: center;
-  padding: 24px 0;
-
+  padding: 22px 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-bottom p {
-  font-size: 0.85rem;
+  margin: 0;
   color: #6b7280;
+  font-size: 0.86rem;
+}
+
+@media (max-width: 760px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    padding: 0 24px 44px;
+    text-align: center;
+  }
+
+  .footer-brand p {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

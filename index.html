@@ -1,9 +1,22 @@
 <!doctype html>
-<html lang="pt">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trivox</title>
+    <meta
+      name="description"
+      content="A Trivox vende produtos criativos, decorativos e personalizados feitos em impressão 3D."
+    />
+    <meta name="theme-color" content="#020617" />
+    <meta property="og:title" content="Trivox | Produtos em impressão 3D" />
+    <meta
+      property="og:description"
+      content="Presentes, decoração, organizadores e peças personalizadas feitas sob encomenda."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./img/logo.png" />
+    <title>Trivox | Produtos em impressão 3D</title>
+    <link rel="icon" href="./img/logo.png" />
     <link rel="stylesheet" href="./style/page.css" />
     <link rel="stylesheet" href="./style/header.css" />
     <link rel="stylesheet" href="./style/nav.css" />
@@ -13,22 +26,25 @@
 
   <body class="page">
     <header class="header">
-      <div class="logo" aria-label="Trivox logo">TX</div>
+      <a class="logo-link" href="#" aria-label="Ir para o início">
+        <img class="logo" src="./img/logo.png" alt="Trivox" />
+      </a>
 
       <form class="search" role="search">
         <input
           type="search"
-          placeholder="Pesquisar"
-          aria-label="Pesquisar"
+          placeholder="Pesquisar produtos"
+          aria-label="Pesquisar produtos"
           class="pesq"
         />
-        <button class="search-btn" aria-label="Pesquisar">
+        <button class="search-btn" type="submit" aria-label="Pesquisar">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
             fill="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"
@@ -37,104 +53,225 @@
         </button>
       </form>
 
-      <ul class="listas">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="listas" id="site-menu">
         <li class="lista"><a href="#">Home</a></li>
-        <li class="lista"><a href="#sobre">Sobre</a></li>
-        <li class="lista"><a href="#contato">Contacto</a></li>
+        <li class="lista"><a href="#produtos">Produtos</a></li>
+        <li class="lista"><a href="#como-comprar">Como comprar</a></li>
+        <li class="lista"><a href="#pedido">Pedido</a></li>
       </ul>
     </header>
 
-    <hr />
+    <nav class="nav" aria-label="Apresentação">
+      <div class="hero-content">
+        <p class="hero-kicker">Produtos criados em impressão 3D</p>
+        <h1 class="hero-title">
+          Peças diferentes para decorar, organizar e <span>presentear</span>
+        </h1>
 
-    <nav class="nav">
-      <h1 class="nav-title">Trivox</h1>
+        <p class="hero-text">
+          A Trivox cria produtos personalizados e sob encomenda: suportes,
+          miniaturas, organizadores, itens decorativos e ideias exclusivas para
+          quem quer algo fora do comum.
+        </p>
 
-      <div class="printer">
-        <div class="printer-frame"></div>
-        <div class="printer-bed"></div>
-        <div class="printer-head"></div>
-        <div class="print-layer"></div>
+        <div class="hero-actions">
+          <a href="#produtos" class="hero-btn">Ver produtos</a>
+          <a
+            href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20comprar%20um%20produto%20da%20Trivox."
+            class="hero-link"
+            target="_blank"
+            rel="noopener"
+          >
+            Comprar pelo WhatsApp
+          </a>
+        </div>
       </div>
 
-      <section class="hero">
-        <div class="hero-content">
-          <h2 class="hero-title">
-            Transformamos ideias em <span>objetos reais</span> com impressao 3D
-          </h2>
-
-          <p class="hero-text">
-            A Trivox cria pecas personalizadas, prototipos e solucoes funcionais
-            com tecnologia de impressao 3D, rapidez e precisao.
-          </p>
-
-          <a href="#contato" class="hero-btn">Pedir orcamento</a>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="brand-mark">TRIVOX</div>
+        <div class="printer">
+          <div class="printer-frame"></div>
+          <div class="printer-bed"></div>
+          <div class="printer-head"></div>
+          <div class="print-layer"></div>
         </div>
-      </section>
+      </div>
     </nav>
 
-    <main class="main" id="sobre">
-      <section class="use-cases section">
-        <h2>Onde a Trivox atua</h2>
+    <main class="main">
+      <section class="section use-cases searchable fade-section" id="produtos">
+        <p class="section-kicker">Vitrine</p>
+        <h2>Produtos para começar a vender</h2>
 
-        <div class="use-grid">
-          <div class="use-card">
-            <h3>Empresas</h3>
-            <p>Prototipagem, pecas tecnicas e solucoes rapidas.</p>
-          </div>
+        <div class="use-grid product-grid">
+          <article class="use-card product-card searchable">
+            <span class="product-tag">Mais pedido</span>
+            <h3>Suportes personalizados</h3>
+            <p>
+              Suportes para celular, controles, fones, mesa gamer, setup e
+              acessórios do dia a dia.
+            </p>
+            <strong class="product-price">Sob consulta</strong>
+            <a href="#pedido" class="product-cta">Pedir este produto</a>
+          </article>
 
-          <div class="use-card">
-            <h3>Criadores</h3>
-            <p>Transformacao de ideias em produtos reais.</p>
-          </div>
+          <article class="use-card product-card searchable">
+            <span class="product-tag">Presente</span>
+            <h3>Miniaturas e decoração</h3>
+            <p>
+              Peças decorativas, personagens, nomes, lembranças e objetos para
+              deixar o ambiente com personalidade.
+            </p>
+            <strong class="product-price">Sob consulta</strong>
+            <a href="#pedido" class="product-cta">Pedir este produto</a>
+          </article>
 
-          <div class="use-card">
-            <h3>Pessoas</h3>
-            <p>Pecas personalizadas para uso diario.</p>
-          </div>
+          <article class="use-card product-card searchable">
+            <span class="product-tag">Organização</span>
+            <h3>Organizadores sob medida</h3>
+            <p>
+              Organizadores para escritório, cozinha, ferramentas, cabos,
+              maquiagem e pequenos objetos.
+            </p>
+            <strong class="product-price">Sob consulta</strong>
+            <a href="#pedido" class="product-cta">Pedir este produto</a>
+          </article>
         </div>
       </section>
 
-      <section class="section tech">
-        <h2>Tecnologia & Materiais</h2>
+      <section class="section tech searchable fade-section" id="diferenciais">
+        <p class="section-kicker">Por que comprar</p>
+        <h2>Produto feito para você, não para todo mundo</h2>
         <p>
-          Trabalhamos com materiais resistentes e tecnologia de impressao 3D
-          FDM, garantindo qualidade e precisao em cada projeto.
+          Diferente de produtos comuns de loja, cada peça pode ser adaptada em
+          cor, tamanho, nome, formato e uso. Você escolhe a ideia e a Trivox
+          transforma em algo físico.
         </p>
+
+        <div class="material-grid">
+          <span>Personalização de cores</span>
+          <span>Produção sob encomenda</span>
+          <span>Peças úteis e decorativas</span>
+        </div>
       </section>
 
-      <section class="section contact fade-section" id="contato">
-        <h2>Fala connosco</h2>
+      <section class="section process searchable fade-section" id="como-comprar">
+        <p class="section-kicker">Compra simples</p>
+        <h2>Como fazer seu pedido</h2>
+
+        <div class="process-grid">
+          <article>
+            <strong>01</strong>
+            <h3>Escolha a ideia</h3>
+            <p>Veja uma categoria ou envie uma referência do que quer comprar.</p>
+          </article>
+          <article>
+            <strong>02</strong>
+            <h3>Personalize</h3>
+            <p>Defina cor, tamanho, nome, quantidade e detalhes importantes.</p>
+          </article>
+          <article>
+            <strong>03</strong>
+            <h3>Receba o valor</h3>
+            <p>A Trivox confirma preço, prazo e forma de entrega pelo WhatsApp.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery searchable fade-section" id="ideias">
+        <p class="section-kicker">Ideias de venda</p>
+        <h2>Produtos que chamam atenção</h2>
+
+        <div class="gallery-grid">
+          <article>
+            <span>Setup gamer</span>
+          </article>
+          <article>
+            <span>Presentes com nome</span>
+          </article>
+          <article>
+            <span>Decoração geek</span>
+          </article>
+          <article>
+            <span>Organização de mesa</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section faq searchable fade-section" id="faq">
+        <p class="section-kicker">Dúvidas</p>
+        <h2>Perguntas frequentes</h2>
+
+        <details>
+          <summary>Já existe catálogo pronto?</summary>
+          <p>
+            O catálogo pode crescer aos poucos. Por enquanto, o cliente pode
+            escolher uma categoria ou enviar uma referência pelo WhatsApp.
+          </p>
+        </details>
+        <details>
+          <summary>Posso pedir uma peça com meu nome?</summary>
+          <p>
+            Sim. Nomes, cores, tamanhos e detalhes podem ser personalizados
+            conforme o produto escolhido.
+          </p>
+        </details>
+        <details>
+          <summary>Como o preço é definido?</summary>
+          <p>
+            O valor depende do tamanho, material, tempo de impressão,
+            acabamento e quantidade.
+          </p>
+        </details>
+      </section>
+
+      <section class="section contact fade-section" id="pedido">
+        <p class="section-kicker">Comprar</p>
+        <h2>Peça seu produto</h2>
         <p class="contact-text">
-          Tens uma ideia, projeto ou duvida? Envia-nos uma mensagem.
+          Envie o produto desejado, cor, quantidade e qualquer referência que
+          ajude a criar sua peça.
         </p>
 
         <form class="contact-form">
           <div class="form-group">
             <label for="name">Nome</label>
-            <input type="text" id="name" placeholder="O teu nome" required />
+            <input type="text" id="name" placeholder="Seu nome" required />
           </div>
 
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Email ou WhatsApp</label>
             <input
-              type="email"
+              type="text"
               id="email"
-              placeholder="teu@email.com"
+              placeholder="Seu contato"
               required
             />
           </div>
 
           <div class="form-group">
-            <label for="message">Mensagem</label>
+            <label for="message">Produto desejado</label>
             <textarea
               id="message"
               rows="5"
-              placeholder="Conta-nos a tua ideia..."
+              placeholder="Ex: suporte para celular preto, com nome, 1 unidade..."
               required
             ></textarea>
           </div>
 
-          <button type="submit" class="contact-btn">Enviar mensagem</button>
+          <button type="submit" class="contact-btn">Enviar pedido pelo WhatsApp</button>
         </form>
       </section>
     </main>
@@ -143,28 +280,28 @@
       <div class="footer-content">
         <div class="footer-brand">
           <h3 class="footer-title">TRIVOX</h3>
-          <p>Transformamos ideias em objetos reais atraves da impressao 3D.</p>
+          <p>Produtos personalizados em impressão 3D para comprar, usar e presentear.</p>
         </div>
 
         <div class="footer-links">
-          <h4>Navegacao</h4>
+          <h4>Navegação</h4>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#sobre">Servicos</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#contato">Contacto</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#como-comprar">Como comprar</a></li>
+            <li><a href="#pedido">Pedido</a></li>
           </ul>
         </div>
 
         <div class="footer-contact">
-          <h4>Contacto</h4>
+          <h4>Contato</h4>
           <p>Email: contato@trivox.pt</p>
-          <p>Portugal - Brasil</p>
+          <p>Pedidos por WhatsApp</p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Trivox - Todos os direitos reservados.</p>
+        <p>&copy; 2026 Trivox. Todos os direitos reservados.</p>
       </div>
     </footer>
 
