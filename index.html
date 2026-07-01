@@ -1,201 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trivox</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivox</title>
+    <link rel="stylesheet" href="./style/page.css" />
+    <link rel="stylesheet" href="./style/header.css" />
+    <link rel="stylesheet" href="./style/nav.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/footer.css" />
+  </head>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="./style/style.css" />
-</head>
+  <body class="page">
+    <header class="header">
+      <div class="logo" aria-label="Trivox logo">TX</div>
 
-<body class="page">
-
-  <!-- HEADER -->
-  <header class="header">
-    <img
-      src="./img/logo.png"
-      alt="Trivox logo"
-      class="logo"
-    />
-
-    <!-- SEARCH -->
-    <form class="search" role="search">
-      <input
-        type="search"
-        placeholder="Pesquisar"
-        aria-label="Pesquisar"
-        class="pesq"
-      />
-      <button class="search-btn" aria-label="Pesquisar">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"
-          />
-        </svg>
-      </button>
-    </form>
-
-    <!-- NAV -->
-    <ul class="listas">
-      <li class="lista"><a href="#">Home</a></li>
-      <li class="lista"><a href="#">Sobre</a></li>
-      <li class="lista"><a href="#">Contacto</a></li>
-    </ul>
-  </header>
-
-  <hr />
-
-  <!-- HERO / NAV -->
-  <nav class="nav">
-    <h1 class="nav-title">Trivox</h1>
-
-    <div class="printer">
-      <div class="printer-frame"></div>
-      <div class="printer-bed"></div>
-      <div class="printer-head"></div>
-      <div class="print-layer"></div>
-    </div>
-
-    <section class="hero">
-      <div class="hero-content">
-        <h2 class="hero-title">
-          Transformamos ideias em <span>objetos reais</span> com impressão 3D
-        </h2>
-
-        <p class="hero-text">
-          A Trivox cria peças personalizadas, protótipos e soluções funcionais
-          com tecnologia de impressão 3D, rapidez e precisão.
-        </p>
-
-        <a href="#contato" class="hero-btn">Pedir orçamento</a>
-      </div>
-    </section>
-  </nav>
-
-  <!-- MAIN -->
-  <main class="main">
-
-    <section class="use-cases section">
-      <h2>Onde a Trivox atua</h2>
-
-      <div class="use-grid">
-        <div class="use-card">
-          <h3>Empresas</h3>
-          <p>Prototipagem, peças técnicas e soluções rápidas.</p>
-        </div>
-
-        <div class="use-card">
-          <h3>Criadores</h3>
-          <p>Transformação de ideias em produtos reais.</p>
-        </div>
-
-        <div class="use-card">
-          <h3>Pessoas</h3>
-          <p>Peças personalizadas para uso diário.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section tech">
-      <h2>Tecnologia & Materiais</h2>
-      <p>
-        Trabalhamos com materiais resistentes e tecnologia de impressão 3D
-        FDM, garantindo qualidade e precisão em cada projeto.
-      </p>
-    </section>
-
-    <section class="section partners">
-      <p class="partners-label">Parcerias</p>
-
-      <div class="partners-grid">
-        <div class="partner-card">Parceiro 1</div>
-        <div class="partner-card">Parceiro 2</div>
-        <div class="partner-card">Parceiro 3</div>
-      </div>
-    </section>
-
-    <section class="section contact fade-section" id="contato">
-      <h2>Fala connosco</h2>
-      <p class="contact-text">
-        Tens uma ideia, projeto ou dúvida? Envia-nos uma mensagem.
-      </p>
-
-      <form class="contact-form">
-        <div class="form-group">
-          <label for="name">Nome</label>
-          <input type="text" id="name" placeholder="O teu nome" required />
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="teu@email.com"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="message">Mensagem</label>
-          <textarea
-            id="message"
-            rows="5"
-            placeholder="Conta-nos a tua ideia..."
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit" class="contact-btn">
-          Enviar mensagem
+      <form class="search" role="search">
+        <input type="search" placeholder="Pesquisar" aria-label="Pesquisar" class="pesq" />
+        <button class="search-btn" aria-label="Pesquisar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+          </svg>
         </button>
       </form>
-    </section>
 
-  </main>
+      <ul class="listas">
+        <li class="lista"><a href="#">Home</a></li>
+        <li class="lista"><a href="#sobre">Sobre</a></li>
+        <li class="lista"><a href="#contato">Contacto</a></li>
+      </ul>
+    </header>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-content">
+    <hr />
 
-      <div class="footer-brand">
-        <h3 class="footer-title">TRIVOX</h3>
+    <nav class="nav">
+      <h1 class="nav-title">Trivox</h1>
+
+      <div class="printer">
+        <div class="printer-frame"></div>
+        <div class="printer-bed"></div>
+        <div class="printer-head"></div>
+        <div class="print-layer"></div>
+      </div>
+
+      <section class="hero">
+        <div class="hero-content">
+          <h2 class="hero-title">
+            Transformamos ideias em <span>objetos reais</span> com impressao 3D
+          </h2>
+
+          <p class="hero-text">
+            A Trivox cria pecas personalizadas, prototipos e solucoes funcionais
+            com tecnologia de impressao 3D, rapidez e precisao.
+          </p>
+
+          <a href="#contato" class="hero-btn">Pedir orcamento</a>
+        </div>
+      </section>
+    </nav>
+
+    <main class="main" id="sobre">
+      <section class="use-cases section">
+        <h2>Onde a Trivox atua</h2>
+
+        <div class="use-grid">
+          <div class="use-card">
+            <h3>Empresas</h3>
+            <p>Prototipagem, pecas tecnicas e solucoes rapidas.</p>
+          </div>
+
+          <div class="use-card">
+            <h3>Criadores</h3>
+            <p>Transformacao de ideias em produtos reais.</p>
+          </div>
+
+          <div class="use-card">
+            <h3>Pessoas</h3>
+            <p>Pecas personalizadas para uso diario.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tech">
+        <h2>Tecnologia & Materiais</h2>
         <p>
-          Transformamos ideias em objetos reais através da impressão 3D.
+          Trabalhamos com materiais resistentes e tecnologia de impressao 3D FDM,
+          garantindo qualidade e precisao em cada projeto.
         </p>
+      </section>
+
+      <section class="section partners">
+        <p class="partners-label">Parcerias</p>
+
+        <div class="partners-grid">
+          <div class="partner-card">Parceiro 1</div>
+          <div class="partner-card">Parceiro 2</div>
+          <div class="partner-card">Parceiro 3</div>
+        </div>
+      </section>
+
+      <section class="section contact fade-section" id="contato">
+        <h2>Fala connosco</h2>
+        <p class="contact-text">
+          Tens uma ideia, projeto ou duvida? Envia-nos uma mensagem.
+        </p>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="O teu nome" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="teu@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" rows="5" placeholder="Conta-nos a tua ideia..." required></textarea>
+          </div>
+
+          <button type="submit" class="contact-btn">Enviar mensagem</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3 class="footer-title">TRIVOX</h3>
+          <p>Transformamos ideias em objetos reais atraves da impressao 3D.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navegacao</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#sobre">Servicos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p>Email: contato@trivox.pt</p>
+          <p>Portugal - Brasil</p>
+        </div>
       </div>
 
-      <div class="footer-links">
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#contato">Contacto</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Trivox - Todos os direitos reservados.</p>
       </div>
+    </footer>
 
-      <div class="footer-contact">
-        <h4>Contacto</h4>
-        <p>Email: contato@trivox.pt</p>
-        <p>Portugal · Brasil</p>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2025 Trivox — Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
